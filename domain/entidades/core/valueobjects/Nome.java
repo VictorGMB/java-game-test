@@ -5,7 +5,7 @@ import utils.Validador;
 
 public class Nome {
     
-    private String nome;
+    private final String nome;
 
     public Nome(String nome) {
         String s = Validador.naoNuloOuVazio(nome, () -> new NomeException.NomeInvalido());
