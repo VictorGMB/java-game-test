@@ -20,6 +20,7 @@ public class EntidadeBase {
 
     public EntidadeBase(String nome, String descricao, int vida) {
         this.nome = new Nome(nome);
+        this.descricao = new Descricao(descricao);
         this.vida = new Vida(vida);
         this.defesas = new EnumMap<>(TipoDefesa.class);
     }
