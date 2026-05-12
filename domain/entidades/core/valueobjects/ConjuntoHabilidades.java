@@ -22,8 +22,8 @@ public class ConjuntoHabilidades {
                 this.espaco[i] = Validador.naoNuloOuVazio(habilidade, () -> new HabilidadeException.HabilidadeNula());
                 return;
             }
-            throw new ConjuntoHabilidadesException.SemEspacoDisponivel();
         }
+        throw new ConjuntoHabilidadesException.SemEspacoDisponivel();
     }
 
     public void substituirHabilidade(Habilidade habilidade, int posicao) {
