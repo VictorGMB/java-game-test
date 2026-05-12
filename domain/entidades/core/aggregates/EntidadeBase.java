@@ -1,4 +1,4 @@
-package domain.entidades.core;
+package domain.entidades.core.aggregates;
 
 import java.util.EnumMap;
 import java.util.Map;
