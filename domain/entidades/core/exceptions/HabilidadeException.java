@@ -11,5 +11,4 @@ public class HabilidadeException extends RuntimeException {
             super("Habilidade não pode ser nula");
         }
     }
-    
 }

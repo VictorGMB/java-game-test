@@ -11,5 +11,4 @@ public class VidaException extends RuntimeException {
             super("Valor de vida não pode ser menor que 1");
         }
     }
-
 }

@@ -20,5 +20,4 @@ public class Nome {
     public String toString() {
         return this.nome;
     }
-
 }
