@@ -10,7 +10,7 @@ public class Nivel {
     private int nivel;
     private int xpAtual;
     private int xpProximoNivel;
-    private float multiplicador;
+    private final float multiplicador;
 
     public Nivel(int nivel, int xpAtual, float multiplicador) {
         if (nivel < 1) throw new NivelException.NivelInvalido(nivel);
