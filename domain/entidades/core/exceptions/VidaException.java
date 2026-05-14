@@ -7,8 +7,8 @@ public class VidaException extends RuntimeException {
     }
 
     public static class ValorInvalido extends VidaException {
-        public ValorInvalido() {
-            super("Valor de vida não pode ser menor que 1");
+        public ValorInvalido(String s, int n) {
+            super("Valor " + n + " para " + s + " é inválido.");
         }
     }
 }

@@ -2,6 +2,7 @@ package domain.entidades.core.aggregates;
 
 import java.util.EnumMap;
 import java.util.Map;
+import java.util.UUID;
 
 import domain.entidades.core.enums.TipoDefesa;
 import domain.entidades.core.valueobjects.ConjuntoHabilidades;
@@ -13,6 +14,7 @@ import domain.entidades.core.valueobjects.Vida;
 
 public class EntidadeBase {
 
+    private final UUID uuid;
     private final Nome nome;
     private final Descricao descricao;
     private final Vida vida;
@@ -21,10 +23,11 @@ public class EntidadeBase {
     private final Nivel nivel;
 
     public EntidadeBase(String nome, String descricao, int vida, int nivel, float multiplicadorXp) {
-        this(nome, descricao, vida, 0, 0, new ConjuntoHabilidades(4), nivel, 0, multiplicadorXp);
+        this(UUID.randomUUID(), nome, descricao, vida, 0, 0, new ConjuntoHabilidades(4), nivel, 0, multiplicadorXp);
     }
 
     public EntidadeBase(
+        UUID uuid,
         String nome,
         String descricao,
         int vida,
@@ -35,6 +38,7 @@ public class EntidadeBase {
         int xpAtual,
         float multiplicadorXp
     ) {
+        this.uuid = uuid;
         this.nome = new Nome(nome);
         this.descricao = new Descricao(descricao);
         this.vida = new Vida(vida);

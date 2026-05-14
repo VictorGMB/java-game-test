@@ -2,20 +2,18 @@ package domain.entidades.core.valueobjects;
 
 import domain.entidades.core.exceptions.VidaException;
 
-public class Vida {
-    
+public class Vida {  
 
     private int total;
     private int atual;
 
     public Vida(int total, int atual) {
         if (total <= 0) {
-            throw new VidaException.ValorInvalido();
+            throw new VidaException.ValorInvalido("Total", total);
         }
-        if (atual < 0 || atual > total) {
-            throw new VidaException.ValorInvalido();
+        if (atual < 0) {
+            throw new VidaException.ValorInvalido("Atual", atual);
         }
-        
         this.total = total;
         this.atual = atual;
     }

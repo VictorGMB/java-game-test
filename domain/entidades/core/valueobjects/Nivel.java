@@ -4,8 +4,8 @@ import domain.entidades.core.exceptions.NivelException;
 
 public class Nivel {
 
-    private static int XP_BASE = 100;
-    private static int INCREMENTO_BASE = 50;
+    private static final int XP_BASE = 100;
+    private static final int INCREMENTO_BASE = 50;
     
     private int nivel;
     private int xpAtual;
