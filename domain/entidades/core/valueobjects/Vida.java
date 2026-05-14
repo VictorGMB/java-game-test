@@ -42,12 +42,12 @@ public class Vida {
         this.atualizaVidaAtual(novaVida);
     }
 
-    public boolean estaMorto() {
-        return this.atual == 0;
+    public boolean vidaZerada() {
+        return this.atual <= 0;
     }
 
-    public boolean estaComVidaCheia() {
-        return this.atual == this.total;
+    public boolean vidaCheia() {
+        return this.atual >= this.total;
     }
 
     private void atualizaVidaAtual(int novoAtual) {
